@@ -2,11 +2,161 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>My Page</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio of Naraksa Veasna — web developer, designer, and problem solver. Showcase of projects, skills, and contact information." />
+  <meta name="author" content="Naraksa Veasna" />
+  <title>Naraksa Veasna — Portfolio</title>
+  <!-- Favicon / Touch icons (replace with your own) -->
+  <link rel="icon" href="/favicon.ico" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
-  <h1>Hello, world!</h1>
+  <!-- Skip link for accessibility -->
+  <a class="skip-link" href="#main" tabindex="0">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="/" aria-label="Naraksa Veasna Home">Naraksa Veasna</a>
+      <nav class="site-nav" role="navigation" aria-label="Primary navigation">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">Menu</button>
+        <ul id="primary-menu" class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main id="main" class="site-main" role="main">
+    <!-- Hero / Intro -->
+    <section id="hero" class="hero container">
+      <div class="hero-content">
+        <h1>Hi, I'm <strong>Naraksa Veasna</strong></h1>
+        <p class="lead">I am a technology and language student bridging software development with clear communication.</p>
+        <p>
+          <a class="btn primary" href="#projects">See my work</a>
+          <a class="btn ghost" href="#contact">Get in touch</a>
+        </p>
+      </div>
+      <div class="hero-image" aria-hidden="true">
+        <!-- Optional illustration or photo -->
+        <img src="assets/hero-illustration.svg" alt="Illustration" />
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about container">
+      <h2>About Me</h2>
+      <p>Raksa is a third-year Bachelor of Science student in Software Development at the American University of Phnom Penh and a second-year Bachelor of Arts student in English at the Royal University of Phnom Penh. 
+          A recipient of multiple competitive scholarships, including full scholarships from AMT, the Ministry of Education, Youhts and Sports, Acleda University of Business, and Spring Education Center. 
+          He graduated high school in 2023 with top academic results and an “A” on the Cambodian National Examination (Bac II).
+          Beyond academics, Raksa has co-led and contributed to national-level education and technology initiatives. 
+          He has served as a Student Ambassador Leader, community fellow, and housing representative, organizing large-scale academic events, industry meetups, university outreach programs, and multi-session webinars in collaboration with government bodies and industry experts. 
+          His work reflects a strong commitment to leadership, structured execution, and advancing digital education in Cambodia.</p>
+      <!-- Optional more detail, timeline, or key achievements -->
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="skills container">
+      <h2>Skills</h2>
+      <ul class="skill-list">
+        <li>HTML / CSS / JavaScript</li>
+        <li>Responsive Design</li>
+        <li>React / Vue / Frameworks</li>
+        <li>Accessibility (a11y)</li>
+        <li>Testing & Performance</li>
+      </ul>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="projects container">
+      <h2>Selected Projects</h2>
+      <div class="project-grid">
+        <!-- Repeat project card markup for each project -->
+        <article class="project-card">
+          <a href="#" class="project-link" aria-label="Open project: Project Title">
+            <div class="project-thumb" aria-hidden="true"><img src="assets/placeholder-project.svg" alt="Project screenshot" /></div>
+            <div class="project-body">
+              <h3 class="project-title">Project Title</h3>
+              <p class="project-summary">One-line summary of the project, tech used, and outcome or link to case study.</p>
+            </div>
+          </a>
+          <ul class="project-tags">
+            <li>React</li>
+            <li>CSS</li>
+            <li>API</li>
+          </ul>
+        </article>
+        <!-- Add additional .project-card elements -->
+      </div>
+    </section>
+
+    <!-- Testimonials (optional) -->
+    <section id="testimonials" class="testimonials container" aria-label="Testimonials">
+      <h2>Testimonials</h2>
+      <blockquote>
+        <p>"Short quote from a client or colleague highlighting your work."</p>
+        <footer>— Client Name, Role</footer>
+      </blockquote>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact container">
+      <h2>Contact</h2>
+      <p>If you'd like to work together, reach out.</p>
+      <form class="contact-form" action="#" method="post">
+        <!-- Replace action with your form endpoint or use Netlify/GitHub Pages forms integration -->
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button class="btn primary" type="submit">Send message</button>
+      </form>
+
+      <p class="contact-meta">Or email me directly at <a href="mailto:you@example.com">you@example.com</a></p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Naraksa Veasna. Built with care and passion.</p>
+      <ul class="social-list" aria-label="Social links">
+        <li><a href="#" rel="noopener" target="_blank">GitHub</a></li>
+        <li><a href="#" rel="noopener" target="_blank">LinkedIn</a></li>
+        <li><a href="#" rel="noopener" target="_blank">Facebook</a></li>
+        <li><a href="#" rel="noopener" target="_blank">Tik Tok</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Optional: small JS for interactivity (nav toggle, focus management) -->
+  <script>
+    // Simple nav toggle for small screens
+    (function () {
+      const btn = document.querySelector('.nav-toggle');
+      const menu = document.getElementById('primary-menu');
+      btn && btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        menu && menu.classList.toggle('open');
+      });
+
+      // Set copyright year
+      const yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+    })();
+  </script>
 </body>
 </html>
