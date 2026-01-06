@@ -10,6 +10,13 @@
   <link rel="icon" href="/favicon.ico" />
   <!-- Stylesheet -->
   <link rel="stylesheet" href="/css/style.css" />
+  <meta property="og:title" content="Naraksa Veasna — Portfolio">
+  <meta property="og:description" content="Web developer & designer — projects, skills, and contact.">
+  <meta property="og:image" content="/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Naraksa Veasna","url":"https://yourdomain","sameAs":["https://github.com/...","https://linkedin.com/..."]}
+</script>
 </head>
 <body>
   <!-- Skip link for accessibility -->
@@ -150,8 +157,12 @@
       btn && btn.addEventListener('click', () => {
         const expanded = btn.getAttribute('aria-expanded') === 'true';
         btn.setAttribute('aria-expanded', String(!expanded));
+        btn.textContent = expanded ? 'Menu' : 'Close';
         menu && menu.classList.toggle('open');
       });
+      menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        menu.classList.remove('open'); btn.setAttribute('aria-expanded','false'); btn.textContent = 'Menu';
+      }));
 
       // Set copyright year
       const yearEl = document.getElementById('year');
